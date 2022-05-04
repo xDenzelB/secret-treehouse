@@ -19,6 +19,8 @@ export default function Login() {
     event.preventDefault();
     const loginWasSuccessful = auth.login(formState.email, formState.password);
 
+    loginWasSuccessful ? history.replace(from) : setError('You are not logged in ):');
+
     // TODO: If login was unsuccessful, set an error with a message
     // to display to the user that their login failed.
     //
@@ -37,6 +39,7 @@ export default function Login() {
           id="email"
           name="email"
           type="email"
+          value={formState.email}
         />{' '}
         <label>Password</label>
         <input
