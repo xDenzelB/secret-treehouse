@@ -40,6 +40,7 @@ export default function Login() {
           name="email"
           type="email"
           value={formState.email}
+          onChange={handleFormChange}
         />{' '}
         <label>Password</label>
         <input
